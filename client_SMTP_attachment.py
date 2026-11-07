@@ -1,5 +1,5 @@
 import smtplib
-from email.contentmanager import maintype, subtype
+from email.message import EmailMessage
 
 my_email = "harelnutman@gmail.com"
 my_password = "hhuc mpoq ycqz acuz"
@@ -12,8 +12,8 @@ msg['To'] = "adipele@gmail.com"
 
 msg.set_content("הראל נוטמן - \n")
 
-with open("joke.txt", "rb") as f:
-    msg.add_attachment(f.read(), maintype = "text", subtype = "plain", filename="joke.txt")
+with open("joke", "rb") as f:
+    msg.add_attachment(f.read(), maintype = "text", subtype = "plain", filename="joke")
 
 with smtplib.SMTP_SSL('smtp.gmail.com') as s:
     s.login(my_email, my_password)
