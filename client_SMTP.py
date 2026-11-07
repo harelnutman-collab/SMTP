@@ -7,11 +7,11 @@ my_password = "hhuc mpoq ycqz acuz"
 
 msg = EmailMessage()
 
-msg['Subject'] = "send SMTP from Harel Nutman"
+msg['Subject'] = "שליחת SMTP מ-הראל נוטמן"
 msg['From'] = my_email
 msg['To'] = "adipele@gmail.com"
 
-msg.set_content("")
+msg.set_content("הראל נוטמן - ")
 
 with smtplib.SMTP_SSL('smtp.gmail.com') as s:
     s.login(my_email, my_password)
