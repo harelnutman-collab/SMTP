@@ -1,12 +1,18 @@
 import smtplib
 
-s = smtplib.SMTP("smtp.gmail.com", 587)
+from email.message import EmailMessage
 
-s.starttls()
-s.login("harelnutman@gmail.com", "Hareli11$")
-message = "hi "
+my_email = "harelnutman@gmail.com"
+my_password = "hhuc mpoq ycqz acuz"
 
-s.sendmail("harelnutman@gmail.com", "adipele@gmail.com", message)
+msg = EmailMessage()
 
-s.quit()
+msg['Subject'] = "send SMTP from Harel Nutman"
+msg['From'] = my_email
+msg['To'] = "adipele@gmail.com"
 
+msg.set_content("")
+
+with smtplib.SMTP_SSL('smtp.gmail.com') as s:
+    s.login(my_email, my_password)
+    s.send_message(msg)
