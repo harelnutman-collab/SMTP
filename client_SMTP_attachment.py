@@ -1,9 +1,6 @@
 import smtplib
 from email.contentmanager import maintype, subtype
 
-from email.message import EmailMessage
-from fileinput import filename
-
 my_email = "harelnutman@gmail.com"
 my_password = "hhuc mpoq ycqz acuz"
 
