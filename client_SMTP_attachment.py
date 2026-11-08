@@ -8,7 +8,7 @@ msg = EmailMessage()
 
 msg['Subject'] = "שליחת SMTP עם קובץ מ- הראל נוטמן"
 msg['From'] = my_email
-msg['To'] = "adipele@gmail.com"
+msg['To'] = "merrygeva312@gmail.com"
 
 msg.set_content("הראל נוטמן - \n")
 
