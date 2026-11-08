@@ -1,3 +1,4 @@
+#git link - https://github.com/harelnutman-collab/SMTP
 import smtplib
 
 from email.message import EmailMessage
